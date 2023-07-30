@@ -1,0 +1,48 @@
+/* Style the toggle chart button */
+#toggleChartButton {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #4CAF50;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-bottom: 10px;
+}
+
+/* Hover effect */
+#toggleChartButton:hover {
+    background-color: #45a049;
+}
+
+/* Active effect when the button is clicked */
+#toggleChartButton:active {
+    background-color: #3e8e41;
+}
+
+  /* Style for the tooltip */
+.tooltip {
+    pointer-events: none;
+}
+
+.tooltip rect {
+    fill-opacity: 0.9;
+}
+
+.tooltip text {
+    pointer-events: none;
+}
+
+#toggleButton{
+    margin-bottom: 8px;
+}
+
+#chartTitle{
+    margin-bottom: 8px;
+}
+
+#select.form-control{display:inline-block}
+
+
+

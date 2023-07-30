@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        #chart2 select {
+            display: none;
+        }
+        #chart3 select{
+            display: none;
+        }
+    </style>
+    <title>D3.js Basic Chart</title>
+</head>
+<body>
+    <h1>Pokemon Stat and Type Explorer</h1>
+    <div>
+        Picking individual Pokemon, as well as the types of Pokemon one would want on their starting team can be difficult.<br> 
+        There are plenty of stats that make the choices difficult. Whether it is selecting based off type or specific stats,<br>
+        this data visualization will help to narrow your choices based on the direction of team you want to build.
+    </div>
+    <h2 id="chartTitle">Average Stats by Type</h2>
+    <button id="toggleChartButton">Next Chart</button>
+    <div id="chart1" style="display: block;">
+        <div>
+            If you prioritize a specific stat (Attack, Defense, HP, etc.), then considering Pokemon type is a must. <br>
+            Some types have naturally higher base stats than others. For example, if you select defense, you will <br>
+            see that rock type has a higher defense stat on average than any other type. Therefore, if you want to <br>
+            build your team around a specific stat, examining this chart will help.
+        </div>
+        <hr>
+        <button id="toggleButton">Change Stat</button>
+        <div id="annotation"></div>
+    </div>
+    <div id="chart2" style="display: none;">
+        Most times when trying to maximize a stat for a team, one should observe how an increase in one stat can <br>
+        affect other stats. To avoid over specializing, one should pick at least one other stat to try to work toward <br>
+        when creating their team. This chart allows comparison of different stats for every pokemon, filtered by type. <br>
+        Pokemon that excel in both stats selected will be found in the upper right of the graph. Since you have <br>
+        potentially already selected a type from the last graph. Now you can compare all the Poemon within any <br>
+        specific type.
+        <hr>
+        <div>
+            <label for="type1Attribute">Type:</label>
+            <select id="type1Attribute"></select>
+        </div>
+        <div>
+            <label for="xAttribute">Select X Attribute:</label>
+            <select id="xAttribute">
+                <option value="HP">HP</option>
+                <option value="Attack" selected="selected">Attack</option>
+                <option value="Defense">Defense</option>
+                <option value="SpAtk">SpAtk</option>
+                <option value="SpDef">SpDef</option>
+                <option value="Speed">Speed</option>
+            </select>
+        </div>
+        <div>
+            <label for="yAttribute">Select Y Attribute:</label>
+            <select id="yAttribute">
+                <option value="HP">HP</option>
+                <option value="Attack">Attack</option>
+                <option value="Defense">Defense</option>
+                <option value="SpAtk">SpAtk</option>
+                <option value="SpDef">SpDef</option>
+                <option value="Speed">Speed</option>
+            </select>
+        </div>
+        <h5>Hover Over Datapoint to Display Pokemon Name</h5>
+    </div>
+    
+    <div id="chart3" style="display: none;">
+        <div>
+            Finally, let's take a look at the best overall Pokemon. Without looking at meximizing a specific stat, by looking<br>
+            at the sum of a Pokemon's stats, we can compare the best overall Pokemon. These Pokemon may not excel in any particular<br>
+            stat, but are the best all-around Pokemon if one is curious about maximizing ALL stats, not any specific stat. One can<br>
+            toggle through the top 100 Pokemon ranked by total stats to compare with the choices made from the previous two charts.
+        </div>
+        <hr>
+        <div>
+            <button id="toggleNextGroup">Next 10 Pokemon</button>
+        </div>
+    </div>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <script src="d3.js"></script>
+    <script src="secondChart.js"></script>
+    <script src="thirdChart.js"></script>
+</body>
+</html>
