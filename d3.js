@@ -1,6 +1,8 @@
 const dataUrl = "Pokemon_Dataset.csv";
 var attribute = "HP";
 
+console.log(dataUrl);
+
 d3.csv(dataUrl).then(function(data) {
   data.forEach(d => {
     d[attribute] = +d[attribute];
