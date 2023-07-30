@@ -1,4 +1,4 @@
-const dataUrl = "http://127.0.0.1:8080/Pokemon_Dataset.csv";
+const dataUrl = "Pokemon_Dataset.csv";
 var attribute = "HP";
 
 d3.csv(dataUrl).then(function(data) {
