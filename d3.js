@@ -1,4 +1,4 @@
-const dataUrl = "Pokemon_Dataset.csv";
+const dataUrl = "https://github.com/cedzo2/MyFiles/blob/main/Pokemon_Dataset.csv";
 var attribute = "HP";
 
 console.log(dataUrl);
