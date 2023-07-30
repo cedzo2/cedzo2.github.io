@@ -1,4 +1,4 @@
-const datarUrl = "http://127.0.0.1:8080/Pokemon_Dataset.csv";
+const datarUrl = "Pokemon_Dataset.csv";
 
 d3.csv(datarUrl).then(function(data) {
     data.forEach(d => {
