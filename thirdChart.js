@@ -1,4 +1,4 @@
-const datarUrl = "https://github.com/cedzo2/MyFiles/blob/main/Pokemon_Dataset.csv";
+const datarUrl = "/Pokemon_Dataset.csv";
 
 d3.csv(datarUrl).then(function(data) {
     data.forEach(d => {
